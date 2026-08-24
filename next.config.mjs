@@ -1,10 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  api: {
-    basePath: '@/api',
-    bodyParser: false,
-    externalResolver: 'src/app/api',
-  },
-};
+const nextConfig = {};
 
 export default nextConfig;
