@@ -10,7 +10,6 @@
 # Icon must end with two \r
 Icon
 
-
 # Thumbnails
 ._*
 
@@ -46,6 +45,9 @@ Temporary Items
 # next.js
 /.next/
 /out/
+
+# IDE(WebStorm)
+.idea
 
 # production
 /build
@@ -90,3 +92,4 @@ next-env.d.ts
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/nextjs,macos,visualstudiocode
+/.idea/
