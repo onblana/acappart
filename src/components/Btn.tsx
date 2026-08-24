@@ -1,12 +1,16 @@
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/button";
 
 interface BtnProps {
   name: string;
+  onClick?: () => void;
 }
 
-const Btn = ({ name }: BtnProps) => {
+const Btn = ({ name, onClick }: BtnProps) => {
   return (
-    <Button className={`bg-slate-100 hover:bg-slate-200 active:bg-slate-300`}>
+    <Button
+      onClick={onClick}
+      className={`min-w-16 bg-slate-100 hover:bg-slate-200 active:bg-slate-300`}
+    >
       {name}
     </Button>
   );
