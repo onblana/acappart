@@ -3,8 +3,8 @@ interface Post {
   category: string;
   title: string;
   content: string;
+  author: string;
   created: string;
-  author_name: string;
 }
 
 export default Post;
