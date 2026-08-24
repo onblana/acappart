@@ -1,16 +1,18 @@
 "use client";
 
+import axios from "axios";
+import { useEffect, useState } from "react";
+
+import Post from "@/types";
+
 import {
   Card,
   CardHeader,
   CardTitle,
   CardDescription,
   CardContent,
-} from "@/components/ui/Card";
+} from "@/components/ui/card";
 import PostItem from "./PostItem";
-import axios from "axios";
-import { useEffect, useState } from "react";
-import Post from "@/types";
 
 interface PostListProps {
   title: string;
@@ -36,7 +38,7 @@ const PostList = ({ title, description }: PostListProps) => {
           <CardDescription>{description}</CardDescription>
         </CardHeader>
         <CardContent>
-          {posts.map((post, i) => (
+          {posts.map((post) => (
             <PostItem key={post.id} post={post} />
           ))}
         </CardContent>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+
 import Btn from "./Btn";
 import { Button } from "@/components/ui/button";
 import {
@@ -29,7 +30,7 @@ const Search = () => {
             <DialogHeader>
               <DialogTitle>Edit profile</DialogTitle>
               <DialogDescription>
-                Make changes to your profile here. Click save when you're done.
+                Make changes to your profile here. Click save when you&apos;re done.
               </DialogDescription>
             </DialogHeader>
             <div className="grid gap-4 py-4">

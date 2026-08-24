@@ -10,7 +10,7 @@ const PostItem = ({ post }: PostItemProps) => {
     <div className="flex gap-10 mb-3">
       <span className="flex-initial">{post.category}</span>
       <span className="flex-auto w-32">{post.title}</span>
-      <span className="flex-initial">{post.author_name}</span>
+      <span className="flex-initial">{post.author}</span>
       <span className="flex-initial">{post.created}</span>
     </div>
   );

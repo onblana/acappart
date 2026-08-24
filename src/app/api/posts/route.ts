@@ -1,8 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getDb } from "@/lib/db";
+
 import Post from "@/types";
 
-export async function GET(req: NextRequest): Promise<NextResponse> {
+export async function GET(_req: NextRequest): Promise<NextResponse> {
   try {
     const db = await getDb();
     const posts: Post[] = await db.all<Post[]>("SELECT * FROM posts");
