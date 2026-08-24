@@ -14,9 +14,10 @@ import Post from "@/types";
 
 interface PostListProps {
   title: string;
+  description: string;
 }
 
-const PostList = ({ title }: PostListProps) => {
+const PostList = ({ title, description }: PostListProps) => {
   const [posts, setPosts] = useState<Post[]>([]);
 
   useEffect(() => {
@@ -24,7 +25,6 @@ const PostList = ({ title }: PostListProps) => {
       .get("/api/posts")
       .then((response) => response.data)
       .then((data) => setPosts(data))
-      .then(() => console.log(posts))
       .catch((error) => console.error("Error:", error));
   }, []);
 
@@ -33,9 +33,7 @@ const PostList = ({ title }: PostListProps) => {
       <Card>
         <CardHeader>
           <CardTitle>{title}</CardTitle>
-          <CardDescription>
-            모든 카테고리의 글을 볼 수 있습니다.
-          </CardDescription>
+          <CardDescription>{description}</CardDescription>
         </CardHeader>
         <CardContent>
           {posts.map((post, i) => (

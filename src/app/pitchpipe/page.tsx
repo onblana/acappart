@@ -1,14 +1,13 @@
-import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Navbar from "@/components/Navbar";
-import Post from "@/components/Post";
+import Footer from "@/components/Footer";
 
 const NewPost = () => {
   return (
     <main className="flex min-h-screen flex-col items-center py-24">
       <Header />
       <Navbar />
-      <Post />
+      {/* 피치파이프 넣기 */}
       <Footer />
     </main>
   );
